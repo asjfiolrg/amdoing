@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>打怪学院</title>
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css?v=1.0">
+  <link rel="icon" href="./img/logo-monster.png">
+  <link rel="stylesheet" href="./more.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/highcharts.js"></script>
+  <script type="text/javascript" src="js/exporting.js"></script>
+  <script type="text/javascript">
+    $(function () {                                                               
+     $('#container').highcharts({                                          
+         chart: {                                                          
+         },                                                                
+         title: {                                                          
+             text: 'web前端岗位需求和薪资情况'                                     
+         },  
+     //x轴
+         xAxis: {                                                          
+             categories: ['2013年', '2014年', '2015年', '2016年', '2017年']
+         },                                                                
+         tooltip: {                                                        
+             formatter: function() {                                       
+                 var s;                                                    
+                 if (this.point.name) { // the pie chart                   
+                     s = ''+                                               
+                         this.point.name +': '+ this.y +' fruits';         
+                 } else {                                                  
+                     s = ''+                                               
+                         this.x  +': '+ this.y;                            
+                 }                                                         
+                 return s;                                                 
+             }                                                             
+         },                                                                
+         labels: {                                                         
+             items: [{                                                     
+                 //html: 'Total fruit consumption',                          
+                 style: {                                                  
+                     left: '40px',                                         
+                     top: '8px',                                           
+                     color: 'black'                                        
+                 }                                                         
+             }]                                                            
+         },                                                                
+         series: [{                                                        
+             type: 'column',                                               
+             name: '岗位需求',                                                 
+             data: [1, 2,2.5, 4,6.6]                                         
+         }, {                                                              
+             type: 'column',                                               
+             name: '薪资情况',                                                 
+             data: [1.5, 3, 5, 6, 9]                                         
+         }
+        //  , {                                                              
+        //      type: 'column',                                               
+        //      name: 'Joe',                                                  
+        //      data: [4, 3, 3, 9, 0]                                         
+        //  }
+        //  , {                                                              
+        //      type: 'spline',                                               
+        //      name: 'Average',                                              
+        //      data: [3, 2.67, 3, 6.33, 3.33],                               
+        //      marker: {                                                     
+        //      	lineWidth: 2,                                               
+        //      	lineColor: Highcharts.getOptions().colors[3],               
+        //      	fillColor: 'white'                                          
+        //      }                                                             
+        //  }
+         , {                                                              
+             type: 'pie',                                                  
+             name: 'Total consumption',                                    
+             // data: [{                                                      
+             //     name: 'Jane',                                             
+             //     y: 13,                                                    
+             //     color: Highcharts.getOptions().colors[0] // Jane's color  
+             // }, {                                                          
+             //     name: 'John',                                             
+             //     y: 23,                                                    
+             //     color: Highcharts.getOptions().colors[1] // John's color  
+             // }, {                                                          
+             //     name: 'Joe',                                              
+             //     y: 19,                                                    
+             //     color: Highcharts.getOptions().colors[2] // Joe's color   
+             // }],                                                           
+             center: [100, 80],                                            
+             size: 100,                                                    
+             showInLegend: false,                                          
+             dataLabels: {                                                 
+                 enabled: false                                            
+             }                                                             
+         }]                                                                
+     });                                                                   
+    });                                                                       				         				
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo-green.png" alt="打怪学院"></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="pages/course.html">课程介绍</a></li>
+          <li><a href="pages/question.html">常见问题</a></li>
+          <li><a href="pages/link.html">联系我们</a></li>
+          <li><a class="enroll-btn" href="pages/enroll.html">报名详情</a></li>
+        </ul>
+        
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="banner">
+    <h3>WEB前端工程师-零基础就业班<i>&nbsp;&nbsp;火热报名中!</i></h3>
+  </div>
+
+  <div class="lp-main">
+    <!-- top hero section -->
+    <div class="lp-hero">
+      <div class="container">
+        <h1>请求集合！英雄，这里是学习编程的乐园</h1>
+        <p>学习编程的人，很多都倒在打开结界的路上。其原因主要是：孤独迷茫，无趣，无休止的知识要点，没有及时上车（工作）。
+        打怪学院，只为解决这些问题存在!</p>
+        <a class="btn btn-default" href="pages/enroll.html">现在报名</a>
+      </div>
+    </div>
+
+    <!-- F1添加开班情况模块 -->
+    <div class="lp-study row">
+      <div class="short-line"></div>
+      <h2 class="col-sm-12" style="margin-bottom:30px">开班情况</h2>
+      <div class="col-sm-4">
+        <h4>Web前端开发</h4>
+        <a href="" class="btn btn-default btn-lg" style="margin-top:20px">点我报名</a>
+      </div>
+      <div class="col-sm-4">
+        <h4>Java开发</h4>
+        <a href="" class="btn btn-default btn-lg" style="margin-top:20px">点我报名</a>
+      </div>
+      <div class="col-sm-4">
+        <h4>Python开发</h4>
+        <a href="" class="btn btn-default btn-lg" style="margin-top:20px">点我报名</a>
+      </div>
+    </div>
+
+    <!-- F1添加就业前景模块 -->
+    
+    <div class="lp-work">
+        <div class="short-line"></div>
+        <h2 style="margin-bottom:20px">就业前景</h2>
+        <div class="container">
+          <div id="container" style="max-width:100%;height:500px;margin:0 auto"></div>
+        </div>
+    </div>
+    <!-- slogan section -->
+    <div class="lp-slogan">
+      <div class="container text-center">
+        <div class="section-title">
+          <div class="short-line"></div>
+          <h2>还有什么比项目经历更重要?</h2>
+        </div>
+
+        <p class="slogan">
+          还有什么比参加过一系列项目更能打动面试官？<br>
+           还有什么比实做项目让你学的更快？<br>
+           还有什么比几个小伙伴一起做个有趣的项目，更燃的？
+        </p>
+
+        <a href="pages/question.html" class="btn btn-default btn-lg">了解打怪学院</a>
+        <h2>带你成功登陆IT/互联网行业</h2>
+
+        <img class="img-responsive" src="img/code.jpeg" alt="bloom">
+      </div>
+    </div>
+
+    <!-- F1添加教育体系模块 -->
+    <div class="lp-teach">
+      <div class="short-line"></div>
+      <h2>教育体系</h2>
+      <div>
+        <div>
+          企业需要什么？<br>技术、知识和能力
+        </div>
+        <div>
+          我们都能提供
+        </div>
+      </div>
+    </div>
+
+    <!-- F1添加持续关心模块 -->
+    <div class="lp-care">
+      <div class="short-line"></div>
+      <h2>持续关心</h2>
+      <div>
+        我们为学员的服务持续到课程结束后，更会提供更多的项目途径<br>我们不做甩手掌柜
+      </div>
+    </div>
+
+    <!-- F1添加教师团队模块 -->
+    <div class="lp-teacher">
+        <div class="short-line"></div>
+        <h2>教师团队</h2>
+        <div>
+          不同的老师将自己的特长技能倾囊相授<br>我们能给你的高质量技能更多
+        </div>
+    </div>
+
+    <!-- course brief section -->
+    <div class="lp-course">
+      <div class="container">
+        <div class="section-title">
+          <div class="short-line"></div>
+          <h2>精品课程 / 技术路线</h2>
+        </div>
+
+        <div class="course-title col-sm-5 text-center">
+          <h1>Web前端工程师</h1>
+          <p>––深圳零基础线下就业班</p>
+          <h3>互联网最热职位<br>
+            与时俱进 就学WEB前端</h3>
+        </div>
+
+        <div class="course-brief col-sm-6 col-md-offset-1">
+          <p>
+            随着近几年网络，APP，微信等的迅速发展，前端已经不是几年前的前端，几乎各行业的互联网公司都需要
+            前端工程师。到招聘网站打出前端两字，出现的职位会让你看到眼花.
+          </p>
+          <h4>Web前端技能, 立即GET!</h4>
+          <a class="btn btn-default btn-lg" href="pages/course.html">查看课程</a>
+          <h3>本课程正在火热报名中！<a class="btn btn-default" href="pages/enroll.html">马上报名</a></h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp-other">
+        <div class="short-line"></div>
+        <h2 style="margin-bottom:30px">其他课程</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="img/java-logo.jpg" alt="">
+              <p><a href="" class="btn btn-default btn-lg">了解详情</a></p>
+            </div>
+            <div class="col-sm-4">
+              <img src="img/h5-logo.jpg" alt="">
+              <p><a href="" class="btn btn-default btn-lg">了解详情</a></p>
+            </div>
+            <div class="col-sm-4">
+              <img src="img/python-logo.jpg" alt="">
+              <p><a href="" class="btn btn-default btn-lg">了解详情</a></p>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+  </div><!-- /.do-content -->
+
+  <footer class="footer-up text-center">
+    <h3>有什么想问的？立即联系助教，回答技术和生活方面的所有问题！</h3>
+    <a class="btn btn-default btn-lg" href="pages/enroll.html">联系助教</a>
+  </footer>
+
+
+  
+
+  <footer class="footer-down">
+    <div class="container">
+      <h3 class="col-sm-4 text-left ">打怪学院</h3>
+      <p class="col-sm-4 col-sm-offset-4 text-right ">
+        &copy; 深圳市都映教育科技有限公司
+      </p>
+
+    </div>
+  </footer>
+
+  
+
+  
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="custom.js"></script>
+</body>
+</html>

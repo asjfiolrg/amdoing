@@ -1,0 +1,45 @@
+.lp-study,.lp-work,.lp-teach,.lp-care,.lp-teacher,.lp-other{
+    text-align: center;
+    /* border:1px solid black; */
+    padding: 10px 0;
+    font-size: 1.2em;
+    margin: 30px 0;
+}
+.short-line{
+        width: 60px;
+        height: 0px;
+        border-top: 3px solid #1ecd97;
+        margin: 0 auto;
+}
+.lp-work .short-line{
+    width: 60px;
+    height: 0px;
+    border-top: 3px solid #1ecd97;
+    margin: 0 auto;
+}
+.lp-teach{
+    background: #403B4A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #E7E9BB, #403B4A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #E7E9BB, #403B4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.lp-care{
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.lp-teacher{
+    background: #40E0D0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.lp-other img{
+    max-width:100%;
+}
+/* #webClass{
+    margin: 0;
+    display:inline-block;
+    padding-right: 50px;
+    padding-left: 50px;
+}*/
+/* #webContent{margin: 0} */
